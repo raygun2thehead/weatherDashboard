@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <title>Weather Dashboard</title>
+    <style>
+        #currentPic {
+            float: top;
+            margin: 0;
+        }
+        
+        p {
+            margin: 1px;
+        }
+
+        #box1{
+            padding: 1px;
+        }
+
+        .forecast {
+            width: 4em;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 bg-light">
+                <p class="search-header my-1">Search for a city</p>
+                <div class="input-group mb-3">
+                    <input id="cityInput" type="text" class="form-control" placeholder="Enter city name"
+                        aria-label="Enter city name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="searchButton">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <ul id="newButton"></ul>
+                <br>
+                <!-- <button class="btn btn-primary mb-3" type="button" id="clearBtn">Clear history</button> -->
+            </div>
+            <div class="col-8" id="searchDiv">
+                <div class="row">
+                    <div class="col-12 border border-dark m-3 rounded" id="box1">
+                        <div class="row">
+                            <div class="col-12">
+                                <span id="cityName" class="cityName align-middle"></span>
+                                <img id="currentPic" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="temperature"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="humidity"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="windSpeed"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex">
+                                <p id="uvIndex"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3>5-Day Forecast</h3>
+                    </div>
+                </div>
+                <div class="row" id="forecasts">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="./sript.js"></script>
+</body>
+
+</html>
